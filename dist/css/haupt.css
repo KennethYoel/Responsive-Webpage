@@ -1,0 +1,321 @@
+/* Make sure that padding behaves as expected */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+p {
+  font-size: 1.2em;
+}
+
+/* Just for the fallback layout */
+.main-layout {
+  max-width: 29.03rem; /* length based on auron(golden ratio) scale. */
+  margin: 0 auto;
+}
+section {
+  margin: 1rem 0;
+}
+
+/* Curtain Menu Navigation */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.overlayContent {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+.curtainMenu {
+  position: fixed;
+  width: 100%;
+  left: 85%;
+  padding: 3rem 4rem;
+  font-size: 1.88em;
+  cursor: pointer;
+}
+
+/* Fixed Navagation Bar */
+.banner {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  padding-left: 5.23rem;
+  z-index: 1;
+}
+.logo > p {
+  color: white;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-top: 0.68rem;
+}
+.fixedNavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  padding: 0.68rem;
+  text-transform: uppercase;
+  /*background-color: #3f3f40;*/
+}
+.target {
+  color: white;
+  text-align: center;
+  padding: 0.24rem 1rem;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+}
+/* Change the color of links on hover and current active links */
+.active,
+.target:hover {
+  /*border-left: 0.09rem solid white;
+  border-right: 0.09rem solid white;
+  */
+  border-bottom: 0.09rem solid lightgrey;
+  border-radius: 0.24rem;
+  color: lightgrey;
+}
+/* Change background color to Beluga */
+.scrolled {
+  background-color: rgb(63, 63, 64, 0.9);
+  transition: 0.3s;
+}
+
+/* Grid-based layout */
+@supports (display: grid) {
+  .main-layout {
+    max-width: 625rem;
+    margin: 0;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(17.94rem, 1fr));
+    grid-gap: 0.62rem;
+    font-size: 100%;
+  }
+  section {
+    margin: 0;
+  }
+}
+
+/* Home section */
+.welcomePage {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 5.23rem;
+  background: linear-gradient(to bottom, #3f3f40 0%, #8b8b8d 100%); /* Beluga */
+}
+header {
+  color: white;
+}
+header > h1 {
+  font-size: 56px;
+  text-transform: uppercase;
+  margin-top: auto;
+}
+
+/* Container for flexboxes */
+.row {
+  display: flex;
+  padding: 2.61rem;
+  align-items: baseline; /* Align item to the same line as to where text sit */
+}
+
+/* Creates two unequal columns that sits next to each other */
+.column {
+  padding: 2.61rem 0 2.61rem 0;
+  height: auto;
+}
+/* Left column */
+.column.left {
+  flex: 1; /* Flex grow 1x */
+}
+/* Right column */
+.column.right {
+  width: minmax(50ch, 65ch);
+  flex: 3; /* Flex grow 3x */
+}
+.left {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* About section styling */
+#About {
+  color: #3f3f40; /* Beluga */
+}
+
+/* Experience section styling */
+#Experience {
+  color: white;
+  background: linear-gradient(to bottom, #3f3f40 0%, #8b8b8d 100%); /* Beluga */
+}
+#past-work {
+  border: 0.09rem solid white;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+/* Education section */
+#Education {
+  color: white;
+  background: linear-gradient(to bottom, #3f3f40 0%, #8b8b8d 100%); /* Beluga */
+}
+
+/* My work */
+/* Grid-based layout for the images */
+@supports (display: grid) {
+  article {
+    max-width: 1000px;
+  }
+  .image_layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17.94rem, 1fr));
+    grid-gap: 1rem;
+  }
+}
+#projects {
+  color: #3f3f40; /* Beluga */
+  border-top: 0.09rem solid lightgray;
+}
+.project-tile {
+  display: flex;
+  flex-flow: column;
+  margin: 0;
+  padding: 2rem;
+}
+img {
+  border: 1px solid #3f3f40; /* Beluga */
+  border-radius: 1rem;
+}
+
+/* Contact section */
+#Call_Me {
+  color: #3f3f40; /* Beluga */
+  border-top: 0.09rem solid Lightgrey;
+}
+#profile_link {
+  min-width: 3.23rem;
+  font-size: 2.5em;
+  padding: 1rem 0;
+  margin-right: 1rem;
+  text-align: center;
+}
+/* https://brandcolors.net/ */
+.fa-twitter {
+  color: #1da1f2;
+}
+.fa-github {
+  color: #313335;
+}
+.fa-linkedin {
+  color: #0077b5;
+}
+.fa-free-code-camp {
+  color: #006400;
+}
+
+/* Style the footer */
+.footer {
+  border-top: 1px solid Lightgrey;
+  padding: 0.62rem;
+  color: #3f3f40; /* Beluga */
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .curtainMenu {
+    display: none;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media only screen and (max-width: 600px) {
+  .fixedNavBar {
+    display: none;
+  }
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+  }
+  .column {
+    padding: 0.62rem;
+  }
+  .column.right {
+    width: 100%; /* Flex grow 3x */
+  }
+  .project-tile {
+    width: 100%;
+  }
+  .input-container {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+  .curtainMenu {
+    left: 70%;
+  }
+  .logo {
+    padding: 2.4rem 4rem;
+  }
+  header > h1 {
+    margin-top: 5rem;
+  }
+  header > p {
+    margin-bottom: 0;
+  }
+  .column.right {
+    width: minmax(30ch, 40ch);
+  }
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media only screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}

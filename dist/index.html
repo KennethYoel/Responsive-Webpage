@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css\haupt.css" />
+    <!--External JS File-->
+    <script src="js\jquery-3.3.1.min.js"></script>
+    <!-- External Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="font - Sad Kropotkin Laugh
+  https://www.dafont.com/sad-kropotkin-laugh.font?l[]=10&l[]=1&text=DESERT"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Load Icon Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Kenneth Gutierrez | Home</title>
+  </head>
+
+  <body>
+    <!-- Main section for my personal portfolio -->
+    <!-- Fixed navbar -->
+    <main class="main-layout">
+      <div class="curtainMenu" onclick="openNav()">
+        <i class="fa fa-bars" style="color:white"></i>
+      </div>
+      <nav class="overlay" id="navbar">
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlayContent">
+          <a href="#welcomeSection">Home</a>
+          <a href="#About">About</a>
+          <a href="#Experience">Experience</a>
+          <a href="#Skillset">Skillset</a>
+          <!--<a href="#Education">Education</a>-->
+          <a href="#projects">My Work</a>
+          <a href="#Call_Me">Contact Me</a>
+        </div>
+      </nav>
+
+      <header class="banner">
+        <div class="logo">
+          <p>
+            ./KG
+          </p>
+        </div>
+        <nav class="fixedNavBar" id="navHeader">
+          <a class="target" href="#welcomeSection">Home</a>
+          <a class="target" href="#About">About</a>
+          <a class="target" href="#Experience">Experience</a>
+          <a class="target" href="#Skillset">Skillset</a>
+          <!--<a class="target" href="#Education">Education</a>-->
+          <a class="target" href="#projects">My Work</a>
+          <a class="target" href="#Call_Me">Contact Me</a>
+        </nav>
+      </header>
+
+      <main class="welcomePage" id="welcomeSection">
+        <header>
+          <h1>Front-End Developer</h1>
+          <q>It's kind of fun to do the impossible.</q>
+          <p>
+            Providing solution for everything from small business websites to
+            interactive web apps.
+          </p>
+        </header>
+      </main>
+
+      <!-- About Section-->
+      <section class="row" id="About">
+        <div class="column left">
+          <h2>About</h2>
+          <i
+            class="fa fa-user-o"
+            style="font-size: 1.5em;border-top: 3px solid #3f3f40;padding-top: 10px;"
+          ></i>
+        </div>
+        <div class="column right">
+          <h3>Ken Gee</h3>
+          <p>
+            I’m a developer who enjoys turning complex problems into simple,
+            beautiful and intuitive codes.
+          </p>
+          <p>
+            And then implementing those codes making sure the interface fulfills
+            its function by working as it should be and smoothly for the user.
+          </p>
+          <p>
+            At the present, working on learning a broad range of cross-industry
+            skills such as programming, algorithms, HTML5, CSS3, JavaScript and
+            jQuery. And as well building web application at freeCodeCamp and
+            contributing to open source.
+          </p>
+          <p>
+            When I’m not coding, you’ll find me with a cup of coffee and either
+            reading a good story or exploring the outdoors.
+          </p>
+        </div>
+      </section>
+
+      <!-- Experience Section-->
+      <section class="row" id="Experience">
+        <div class="column left">
+          <h2>Experience</h2>
+          <i
+            class="fa fa-file-code-o"
+            style="font-size: 1.5em;border-top: 3px solid white;padding-top: 10px;"
+          ></i>
+        </div>
+        <div class="column right" id="past-work">
+          <h4>
+            Name of Company
+            <a href="#">
+              <i
+                class="fa fa-external-link"
+                style="font-size: 1em;color:white;padding-left:1rem;"
+              ></i>
+            </a>
+          </h4>
+          <span>Date I was Contracted</span>
+          <p>Job title.</p>
+        </div>
+      </section>
+
+      <!-- Skillset Section -->
+      <section class="row" id="Skillset">
+        <div class="column left">
+          <h2>Skillset</h2>
+          <i
+            class="fa fa-gears"
+            style="font-size: 1.5em;border-top: 3px solid #3f3f40;padding-top: 10px;"
+          ></i>
+        </div>
+        <div class="column right">
+          <p>HTML</p>
+          <div class="container">
+            <div class="skills html">20%</div>
+          </div>
+
+          <p>CSS</p>
+          <div class="container">
+            <div class="skills css">20%</div>
+          </div>
+
+          <p>JavaScript</p>
+          <div class="container">
+            <div class="skills js">5%</div>
+          </div>
+
+          <p>PHP</p>
+          <div class="container">
+            <div class="skills php">1%</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section
+    <section class="row" id="Education">
+      <div class="column left">
+        <h2>Education</h2>
+        <i class="fa fa-graduation-cap" style="font-size: 1.5em;border-top: 3px solid white;padding-top: 10px;"></i>
+      </div>
+      <div class="column right">
+        <p>Date of Completion</p>
+        <h6>Name of Degree</h6>
+        <p>Name of School</p>
+      </div>
+    </section>-->
+
+      <!-- My Works Section-->
+      <section class="row" id="projects">
+        <div class="column left">
+          <h2>My Projects</h2>
+          <i
+            class="fa fa-desktop"
+            style="font-size: 1.5em;border-top: 3px solid #3f3f40;padding-top: 10px;"
+          ></i>
+        </div>
+        <div class="column right">
+          <article class="image_layout">
+            <div class="project-tile">
+              <a
+                href="https://codepen.io/privateGee/full/PaXvrx"
+                target="_blank"
+              >
+                <img
+                  src="https://placehold.it/150x80?text=IMAGE"
+                  style="width:100%"
+                  alt="Image"
+                />
+              </a>
+              <h4>freeCodeCamp.org</h4>
+              <span>HTML - CSS - JavaScript</span>
+            </div>
+            <div class="project-tile">
+              <img
+                src="https://placehold.it/150x80?text=IMAGE"
+                style="width:100%"
+                alt="Image"
+              />
+              <h4>Name of Company/Website</h4>
+              <p>The Coding/Work I have done.</p>
+            </div>
+            <div class="project-tile">
+              <img
+                src="https://placehold.it/150x80?text=IMAGE"
+                style="width:100%"
+                alt="Image"
+              />
+              <h4>Name of Company/Website</h4>
+              <p>The Coding/Work I have done.</p>
+            </div>
+            <div class="project-tile">
+              <img
+                src="https://placehold.it/150x80?text=IMAGE"
+                style="width:100%"
+                alt="Image"
+              />
+              <h4>Name of Company/Website</h4>
+              <p>The Coding/Work I have done.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="row" id="Call_Me">
+        <div class="column left">
+          <h2>Let's Talk</h2>
+          <i
+            class="fa fa-bullhorn"
+            style="font-size: 32px;border-top: 0.24rem solid #3f3f40;padding-top: 0.62rem;"
+          ></i>
+        </div>
+        <div class="column right">
+          <h3>kennyg@kenguteres.com</h3>
+          <a
+            href="https://github.com/KennethYoel"
+            target="_blank"
+            title="GitHub"
+            id="profile_link"
+            ><i class="fa fa-github"></i
+          ></a>
+          <a
+            href="https://twitter.com/KennethYoel"
+            target="_blank"
+            title="Twitter"
+            id="profile_link"
+            ><i class="fa fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.freecodecamp.org/kennethyoel"
+            target="_blank"
+            title="freeCodeCamp"
+            id="profile_link"
+          >
+            <i class="fa fa-free-code-camp"></i
+          ></a>
+          <a href="#" target="_blank" title="Linkedin" id="profile-link"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>
+          Written and Coded by
+          <a
+            href="https://www.freecodecamp.org/kennethyoel"
+            target="_blank"
+            id="profile-link"
+            >Ken Gutierrez</a
+          >.
+        </p>
+      </footer>
+    </main>
+
+    <!-- Toggle between opening and closing curtain menu when the user clicks on the icon -->
+    <script>
+      /* Open when someone clicks on the span element */
+      function openNav() {
+        document.getElementById('navbar').style.width = '100%';
+      }
+
+      /* Close when someone clicks on the "x" symbol inside the overlay */
+      function closeNav() {
+        document.getElementById('navbar').style.width = '0%';
+      }
+    </script>
+    <!--Transition from a transparent background to a beluga colored background-->
+    <script>
+      $(function() {
+        var header = $('.fixedNavBar');
+
+        $(window).scroll(function() {
+          var scroll = $(window).scrollTop();
+          if (scroll >= 600) {
+            header.addClass('scrolled');
+          } else {
+            header.removeClass('scrolled');
+          }
+        });
+      });
+    </script>
+    <script>
+      // Get the container element
+      var btnContainer = document.getElementById('navHeader');
+
+      // Get all buttons with class="btn" inside the container
+      var btns = btnContainer.getElementsByClassName('target');
+
+      // Loop through the buttons and add the active class to the current/clicked button
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('click', function() {
+          var current = document.getElementsByClassName('active');
+
+          // If there's no active class
+          if (current.length > 0) {
+            current[0].className = current[0].className.replace(' active', '');
+          }
+
+          // Add the active class to the current/clicked button
+          this.className += ' active';
+        });
+      }
+    </script>
+  </body>
+</html>
