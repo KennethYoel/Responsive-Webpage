@@ -1,2 +1,2 @@
 # Responsive-Webpage
-A personal portfolio
+A personal portfolio using modern responsive design.
