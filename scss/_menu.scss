@@ -1,0 +1,41 @@
+// Top Right Menu Button
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  @include easeOut;
+
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    @include easeOut;
+  }
+
+  // Rotate Into X With Menu Lines
+  &.close {
+    transform: rotate(180deg); // Rotates together the button line 180 degrees.
+
+    .btn-line {
+      // Line 1 - Hide
+      &:nth-child(1) {
+        opacity: 0;
+      }
+      // Line 2 - Rotate
+      &:nth-child(2) {
+        transform: rotate(-45deg) translate(-8px, 11px); // Takes a while but play wiht the px to get the look I want.
+      }
+      // Line 3 - Rotae
+      &:nth-child(3) {
+        transform: rotate(45deg) translate(5px, 3px);
+      }
+      // Line 3 - Hide
+      &:nth-child(4) {
+        opacity: 0;
+      }
+    }
+  }
+}

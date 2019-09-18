@@ -1,0 +1,32 @@
+// Creating Variables
+$primary-color: #3f3f40;
+$secondary-color: #00539c;
+$show-home-image: false;
+$home-image: url(../img/nameOFImageFile.png); // The ../ means to look outside the css file(origin)
+$background-opacity: 0.9;
+
+// Creating a Function
+@mixin easeOut {
+  transition: all 0.7s ease-out; // Have the color fade in and out.
+}
+
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        // A pseudo element :after, runs code after bg-img.
+        content: '';
+        position: absolute; // So the image covers the whole body.
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+    }
+  }
+}

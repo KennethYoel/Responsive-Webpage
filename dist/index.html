@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Kenneth Gutierrez | Home</title>
     <!-- External Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css\haupt.css" />
+    <link rel="stylesheet" type="text/css" href="css\main.css" />
     <!--External JS File-->
     <script src="js\jquery-3.3.1.min.js"></script>
     <!-- External Fonts -->
@@ -22,64 +23,56 @@
       type="text/css"
     />
     <!-- Load Icon Library -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <title>Kenneth Gutierrez | Home</title>
+    <script src="https://kit.fontawesome.com/908dd2e7d0.js"></script>
   </head>
 
-  <body>
-    <!-- Main section for my personal portfolio -->
-    <!-- Fixed navbar -->
-    <main class="main-layout">
-      <div class="curtainMenu" onclick="openNav()">
-        <i class="fa fa-bars" style="color:white"></i>
+  <body id="bg-img">
+    <!-- Navigation section for my personal portfolio -->
+    <header class="banner">
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
       </div>
-      <nav class="overlay" id="navbar">
-        <!-- Button to close the overlay navigation -->
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-          >&times;</a
-        >
-        <div class="overlayContent">
-          <a href="#welcomeSection">Home</a>
-          <a href="#About">About</a>
-          <a href="#Experience">Experience</a>
-          <a href="#Skillset">Skillset</a>
-          <!--<a href="#Education">Education</a>-->
-          <a href="#projects">My Work</a>
-          <a href="#Call_Me">Contact Me</a>
+
+      <nav class="menu" id="nav-header">
+        <div class="menu-branding">
+          <!--where my logo is placed-->
+          <div class="portrait"></div>
         </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a class="target" href="#welcomeSection">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="target" href="#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="target" href="#Experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="target" href="#projects">My Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Call_Me">Contact Me</a>
+          </li>
+        </ul>
       </nav>
+    </header>
 
-      <header class="banner">
-        <div class="logo">
-          <p>
-            ./KG
-          </p>
-        </div>
-        <nav class="fixedNavBar" id="navHeader">
-          <a class="target" href="#welcomeSection">Home</a>
-          <a class="target" href="#About">About</a>
-          <a class="target" href="#Experience">Experience</a>
-          <a class="target" href="#Skillset">Skillset</a>
-          <!--<a class="target" href="#Education">Education</a>-->
-          <a class="target" href="#projects">My Work</a>
-          <a class="target" href="#Call_Me">Contact Me</a>
-        </nav>
-      </header>
-
-      <main class="welcomePage" id="welcomeSection">
-        <header>
-          <h1>Front-End Developer</h1>
-          <q>It's kind of fun to do the impossible.</q>
-          <p>
-            Providing solution for everything from small business websites to
-            interactive web apps.
-          </p>
-        </header>
-      </main>
+    <!-- Main section for my personal portfolio -->
+    <main class="main-layout">
+      <section class="welcomePage" id="home">
+        <h1 class="lg-heading">
+          Front-End <span class="text-secondary">Developer</span>
+        </h1>
+        <q>It's kind of fun to do the impossible.</q>
+        <h3 class="sm-heading">
+          Providing solution for everything from small business websites to
+          interactive web apps.
+        </h3>
+      </sectiion>
 
       <!-- About Section-->
       <section class="row" id="About">
@@ -134,38 +127,6 @@
           </h4>
           <span>Date I was Contracted</span>
           <p>Job title.</p>
-        </div>
-      </section>
-
-      <!-- Skillset Section -->
-      <section class="row" id="Skillset">
-        <div class="column left">
-          <h2>Skillset</h2>
-          <i
-            class="fa fa-gears"
-            style="font-size: 1.5em;border-top: 3px solid #3f3f40;padding-top: 10px;"
-          ></i>
-        </div>
-        <div class="column right">
-          <p>HTML</p>
-          <div class="container">
-            <div class="skills html">20%</div>
-          </div>
-
-          <p>CSS</p>
-          <div class="container">
-            <div class="skills css">20%</div>
-          </div>
-
-          <p>JavaScript</p>
-          <div class="container">
-            <div class="skills js">5%</div>
-          </div>
-
-          <p>PHP</p>
-          <div class="container">
-            <div class="skills php">1%</div>
-          </div>
         </div>
       </section>
 
@@ -254,14 +215,14 @@
             target="_blank"
             title="GitHub"
             id="profile_link"
-            ><i class="fa fa-github"></i
+            ><i class="fab fa-github"></i
           ></a>
           <a
             href="https://twitter.com/KennethYoel"
             target="_blank"
             title="Twitter"
             id="profile_link"
-            ><i class="fa fa-twitter"></i
+            ><i class="fab fa-twitter"></i
           ></a>
           <a
             href="https://www.freecodecamp.org/kennethyoel"
@@ -269,10 +230,10 @@
             title="freeCodeCamp"
             id="profile_link"
           >
-            <i class="fa fa-free-code-camp"></i
+            <i class="fab fa-free-code-camp"></i
           ></a>
           <a href="#" target="_blank" title="Linkedin" id="profile-link"
-            ><i class="fa fa-linkedin"></i
+            ><i class="fab fa-linkedin fa-2x"></i
           ></a>
         </div>
       </section>
@@ -292,53 +253,6 @@
     </main>
 
     <!-- Toggle between opening and closing curtain menu when the user clicks on the icon -->
-    <script>
-      /* Open when someone clicks on the span element */
-      function openNav() {
-        document.getElementById('navbar').style.width = '100%';
-      }
-
-      /* Close when someone clicks on the "x" symbol inside the overlay */
-      function closeNav() {
-        document.getElementById('navbar').style.width = '0%';
-      }
-    </script>
-    <!--Transition from a transparent background to a beluga colored background-->
-    <script>
-      $(function() {
-        var header = $('.fixedNavBar');
-
-        $(window).scroll(function() {
-          var scroll = $(window).scrollTop();
-          if (scroll >= 600) {
-            header.addClass('scrolled');
-          } else {
-            header.removeClass('scrolled');
-          }
-        });
-      });
-    </script>
-    <script>
-      // Get the container element
-      var btnContainer = document.getElementById('navHeader');
-
-      // Get all buttons with class="btn" inside the container
-      var btns = btnContainer.getElementsByClassName('target');
-
-      // Loop through the buttons and add the active class to the current/clicked button
-      for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener('click', function() {
-          var current = document.getElementsByClassName('active');
-
-          // If there's no active class
-          if (current.length > 0) {
-            current[0].className = current[0].className.replace(' active', '');
-          }
-
-          // Add the active class to the current/clicked button
-          this.className += ' active';
-        });
-      }
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
