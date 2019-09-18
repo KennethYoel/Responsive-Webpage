@@ -8,8 +8,7 @@
 body {
   @include background;
   background: $primary-color;
-  color: #fff;
-  height: 100%;
+  color: #403f3c;
   margin: 0;
   font-family: 'Raleway', sans-serif;
   line-height: 1.5;
@@ -23,7 +22,7 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 6rem; // Same as typing h3.lg-heading in css, modifying the h3 with class lg-heading.
+    font-size: 4rem; // Same as typing h3.lg-heading in css, modifying the h3 with class lg-heading.
   }
 
   &.sm-heading {
@@ -37,7 +36,7 @@ h3 {
 }
 
 a {
-  color: #fff;
+  color: #403f3c;
   text-decoration: none;
 }
 
@@ -52,10 +51,113 @@ header {
 }
 
 main {
-  padding: 8rem;
-  height: 100%;
+  max-width: 625rem;
+  margin: 0;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(17.94rem, 1fr));
+  grid-gap: 0.62rem;
+  font-size: 100%;
+
+  // Welcome Page
+  .welcomePage {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 5.23rem;
+    background: linear-gradient(
+      to bottom,
+      #3f3f40 0%,
+      #8b8b8d 100%
+    ); /* Beluga */
+    overflow: hidden;
+    h1 {
+      margin-top: auto;
+    }
+  }
+
+  section {
+    padding: 8rem;
+    height: 100%;
+    margin: 1rem 0;
+
+    /* Container for flexboxes */
+    &.row {
+      display: flex;
+      padding: 2.61rem;
+      align-items: baseline; /* Align item to the same line as to where text sit */
+    }
+
+    /* Creates two unequal columns that sits next to each other */
+    &.column {
+      padding: 2.61rem 0 2.61rem 0;
+      height: auto;
+    }
+    /* Left column */
+    &.column.left {
+      flex: 1; /* Flex grow 1x */
+    }
+    /* Right column */
+    &.column.right {
+      width: minmax(50ch, 65ch);
+      flex: 3; /* Flex grow 3x */
+    }
+    &.left {
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    /* About section styling */
+    &#about {
+      color: #3f3f40; /* Beluga */
+    }
+
+    &#past-work {
+      border: 0.09rem solid white;
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+
+    /* My work */
+    /* Grid-based layout for the images */
+    @supports (display: grid) {
+      article {
+        max-width: 1000px;
+      }
+      .image-layout {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(17.94rem, 1fr));
+        grid-gap: 1rem;
+      }
+    }
+    &#projects {
+      color: #3f3f40; /* Beluga */
+      border-top: 0.09rem solid lightgray;
+    }
+    &.project-tile {
+      display: flex;
+      flex-flow: column;
+      margin: 0;
+      padding: 2rem;
+    }
+    img {
+      border: 1px solid #3f3f40; /* Beluga */
+      border-radius: 1rem;
+    }
+
+    /* Contact section */
+    &#call-me {
+      color: #3f3f40; /* Beluga */
+      border-top: 0.09rem solid Lightgrey;
+    }
+  }
 
   .icon {
+    min-width: 3.23rem;
+    padding: 1rem 0;
+    margin-right: 1rem;
+    text-align: center;
     margin-top: 1rem;
 
     a {
@@ -67,10 +169,66 @@ main {
       }
     }
   }
-  &#home {
-    overflow: hidden;
-    h1 {
-      margin-top: 50vh;
-    }
+
+  /* Style the footer */
+  .footer {
+    border-top: 1px solid Lightgrey;
+    padding: 0.62rem;
+    color: #3f3f40; /* Beluga */
+    text-align: center;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media only screen and (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+  }
+  .column {
+    padding: 0.62rem;
+  }
+  .column.right {
+    width: 100%; /* Flex grow 3x */
+  }
+  .project-tile {
+    width: 100%;
+  }
+  .input-container {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+  .curtainMenu {
+    left: 70%;
+  }
+  .menu-branding {
+    padding: 2.4rem 4rem;
+  }
+  header > h1 {
+    margin-top: 5rem;
+  }
+  header > p {
+    margin-bottom: 0;
+  }
+  .column.right {
+    width: minmax(30ch, 40ch);
+  }
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media only screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
 }
