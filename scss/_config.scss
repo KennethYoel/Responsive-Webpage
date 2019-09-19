@@ -1,8 +1,11 @@
 // Creating Variables
 $primary-color: #f0f1e8; //#3f3f40; // Beluga
 $secondary-color: #f54d27;
+$highlight-color: #ecece2;
+$text-color: #403f3c;
 $show-home-image: false;
-$home-image: url(../img/nameOFImageFile.png); // The ../ means to look outside the css file(origin)
+$home-image: url('../img/nameOFImageFile.png'); // The ../ means to look outside the css file(origin)
+$branding-image: url('../img/portrait.jpg');
 $background-opacity: 0.9;
 
 // Creating a Function

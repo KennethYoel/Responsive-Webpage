@@ -28,7 +28,7 @@
       &:nth-child(2) {
         transform: rotate(-45deg) translate(-8px, 11px); // Takes a while but play wiht the px to get the look I want.
       }
-      // Line 3 - Rotae
+      // Line 3 - Rotate
       &:nth-child(3) {
         transform: rotate(45deg) translate(5px, 3px);
       }
@@ -37,5 +37,109 @@
         opacity: 0;
       }
     }
+  }
+}
+
+// Menu Overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: $background-opacity;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding,
+  &-nav {
+    // Adds -branding to .menu, now it represents .menu-branding.
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, $amount: 5);
+    list-style: none;
+    transform: translate3d(0, 100%, 0); // Start at the bottom.
+    @include easeOut;
+
+    &.show {
+      // Slide overlay menu from bottom.
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // Branding Side
+  &-branding {
+    background: darken($primary-color, $amount: 5);
+    transform: translate3d(0, -100%, 0); // Start at the top.
+    @include easeOut;
+
+    &.show {
+      // Slide overlay menu from top.
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portrait {
+      width: 250px;
+      height: 250px;
+      background: $branding-image;
+      border-radius: 50%;
+      border: solid 3px $secondary-color;
+    }
+  }
+
+  .nav-item {
+    // Have the item off the screen until show is addded by js.
+    transform: translate3d(
+      600px,
+      0,
+      0
+    ); // Moving item 600 px off the screen to start with.
+    @include easeOut;
+
+    &.show {
+      // Slide in from right.
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-weight: 300;
+    color: $text-color;
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Delay each nav item slide by 0.1s
+// Similar to for(let i = 0; i < 4; i++) in js for example.
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    // Since it takes a variable needed to wrap $x in #{}, kinda of like a template literal in ES6.
+    transition-delay: $x * 0.1s;
   }
 }

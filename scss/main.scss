@@ -7,8 +7,7 @@
 
 body {
   @include background;
-  background: $primary-color;
-  color: #403f3c;
+  color: $text-color;
   margin: 0;
   font-family: 'Raleway', sans-serif;
   line-height: 1.5;
@@ -26,10 +25,11 @@ h3 {
   }
 
   &.sm-heading {
+    color: #87768e;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(
-      lighten($primary-color, 2),
+      lighten($highlight-color, 2),
       0.5
     ); // Takes two parameters, color and how much to lighten the color. And then wrap it around rgba() and add an opacity as the second argument.
   }
@@ -81,6 +81,7 @@ main {
     padding: 8rem;
     height: 100%;
     margin: 1rem 0;
+    background: $primary-color;
 
     /* Container for flexboxes */
     &.row {
