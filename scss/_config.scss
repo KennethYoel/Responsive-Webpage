@@ -5,6 +5,7 @@ $highlight-color: #ecece2;
 $text-color: #403f3c;
 $show-home-image: false;
 $home-image: url('../img/nameOFImageFile.png'); // The ../ means to look outside the css file(origin)
+$branding-smImage: url('../img/portrait_small.jpg');
 $branding-image: url('../img/portrait.jpg');
 $background-opacity: 0.9;
 
@@ -31,5 +32,31 @@ $background-opacity: 0.9;
         z-index: -1;
       }
     }
+  }
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+  // For screens 500px wide or less.
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+// For screens 768px wide or less.
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+// For screens in between 769px to 1170px wide.
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+// For screens from 1171px wide and above.
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
