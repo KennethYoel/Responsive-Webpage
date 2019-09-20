@@ -35,6 +35,15 @@ $background-opacity: 0.9;
   }
 }
 
+// Set Text Color(using a @function because I need it to return a value.
+@function set-text-color($color) {
+  @if (lightness($color) < 40) {
+    @return #40343c;
+  } @else {
+    @return #fcfcfa;
+  }
+}
+
 // Media Query Mixins
 @mixin mediaSm {
   // For screens 500px wide or less.
