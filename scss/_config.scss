@@ -1,8 +1,8 @@
 // Creating Variables
-$primary-color: #f0f1e8; //#3f3f40; // Beluga
-$secondary-color: #f54d27;
-$highlight-color: #ecece2;
-$text-color: #403f3c;
+$primary-color: #f0f1e8;
+$secondary-color: #ebeae1;
+$highlight-color: #f54e28;
+$text-color: #3f3f40;
 $show-home-image: false;
 $home-image: url('../img/nameOFImageFile.png'); // The ../ means to look outside the css file(origin)
 $branding-smImage: url('../img/portrait_small.jpg');
@@ -37,10 +37,10 @@ $background-opacity: 0.9;
 
 // Set Text Color(using a @function because I need it to return a value.
 @function set-text-color($color) {
-  @if (lightness($color) < 40) {
-    @return #40343c;
-  } @else {
+  @if (lightness($color) > 40) {
     @return #fcfcfa;
+  } @else {
+    @return #3f3f40;
   }
 }
 

@@ -11,7 +11,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: set-text-color($primary-color);
+    background: $highlight-color;
     @include easeOut;
   }
 
@@ -68,7 +68,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-color, $amount: 5);
+    background: darken(white, $amount: 5);
     list-style: none;
     transform: translate3d(0, 100%, 0); // Start at the bottom.
     @include easeOut;
@@ -81,7 +81,7 @@
 
   // Branding Side
   &-branding {
-    background: darken($primary-color, $amount: 5);
+    background: darken(white, $amount: 5);
     transform: translate3d(0, -100%, 0); // Start at the top.
     @include easeOut;
 
@@ -95,7 +95,7 @@
       height: 250px;
       background: $branding-image;
       border-radius: 50%;
-      border: solid 3px $secondary-color;
+      border: solid 3px $highlight-color;
     }
   }
 
@@ -114,7 +114,7 @@
     }
 
     &.current > a {
-      color: $secondary-color;
+      color: $highlight-color;
     }
   }
 
@@ -130,7 +130,7 @@
     @include easeOut;
 
     &:hover {
-      color: $secondary-color;
+      color: $highlight-color;
     }
   }
 }

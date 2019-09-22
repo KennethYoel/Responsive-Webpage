@@ -1,6 +1,5 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
 
 * {
   box-sizing: border-box;
@@ -8,7 +7,7 @@
 
 body {
   @include background;
-  color: $primary-color;
+  color: $text-color;
   margin: 0;
   font-family: 'Raleway', sans-serif;
   line-height: 1.5;
@@ -30,7 +29,7 @@ h3 {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(
-      lighten($highlight-color, 2),
+      lighten($secondary-color, 2),
       0.5
     ); // Takes two parameters, color and how much to lighten the color. And then wrap it around rgba() and add an opacity as the second argument.
   }
@@ -48,15 +47,16 @@ header {
 }
 
 .text-secondary {
-  color: $secondary-color;
+  color: $highlight-color;
 }
 
 main {
-  max-width: 625rem;
-  margin: 0;
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(17.94rem, 1fr));
   grid-gap: 0.62rem;
+  max-width: 625rem;
+  margin: 0;
+  //height: calc(100vh - 60px); // For creating a stickyy footer.
   font-size: 100%;
 
   // Welcome Page
@@ -70,9 +70,9 @@ main {
     padding: 5.23rem;
     background: linear-gradient(
       to bottom,
-      #3f3f40 0%,
-      #8b8b8d 100%
-    ); /* Beluga */
+      $text-color 0%,
+      $secondary-color 100%
+    );
     overflow: hidden;
     h1 {
       margin-top: auto;
@@ -85,30 +85,29 @@ main {
     margin: 1rem 0;
     background: $primary-color;
 
-    /* Container for flexboxes */
+    /* Grid Template */
     &.row {
-      display: flex;
-      padding: 2.61rem;
-      align-items: baseline; /* Align item to the same line as to where text sit */
+      display: grid;
+      grid-gap: 30px;
+      grid-template-areas: 'columnLeft columnRight';
+      grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Creates two unequal columns that sits next to each other */
-    &.column {
-      padding: 2.61rem 0 2.61rem 0;
-      height: auto;
-    }
     /* Left column */
     &.column.left {
-      flex: 1; /* Flex grow 1x */
+      grid-area: columnLeft;
+      background-color: #fcfcfa;
+      margin: auto;
+      //width: minmax(50ch, 65ch);
+      font-size: 1.2em;
+      text-align: center;
     }
     /* Right column */
     &.column.right {
-      width: minmax(50ch, 65ch);
-      flex: 3; /* Flex grow 3x */
-    }
-    &.left {
-      font-size: 1.2em;
-      text-align: center;
+      grid-area: columnRight;
+      margin: auto;
+      padding: 0.5rem;
+      //width: minmax(50ch, 65ch);
     }
 
     /* About section styling */
@@ -172,12 +171,17 @@ main {
       }
     }
   }
-
-  /* Style the footer */
-  .footer {
-    border-top: 1px solid Lightgrey;
-    padding: 0.62rem;
-    color: #3f3f40; /* Beluga */
-    text-align: center;
-  }
 }
+
+/* Style the footer */
+.main-footer {
+  border-top: 1px solid #3f3f40; /* Beluga */
+  padding: 0.62rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color); //#3f3f40; /* Beluga */
+  text-align: center;
+  height: 60px;
+  width: 100%;
+}
+
+@import 'mobile';
