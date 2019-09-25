@@ -34,7 +34,7 @@
     width: 100%;
     min-height: 0;
 
-    &.show {
+    &.showOverlay {
       transform: translate3d(0, 0, 0);
     }
   }
@@ -57,7 +57,7 @@
   }
 }
 
-// Smartphones
+/*Smartphones*/
 @include mediaSm {
   main {
     .lg-heading {
@@ -70,20 +70,80 @@
     margin-top: 5vh;
   }
 
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(100%, 0, 0);
-    font-size: 12px;
+  .menu-btn {
+    visibility: visible;
   }
 
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(-100%, 0, 0);
+  .menu {
+    position: fixed;
+    top: 0;
+    visibility: hidden;
 
-    .portrait {
-      background: $branding-smImage;
-      width: 100px;
-      height: 100px;
+    &.showOverlay {
+      visibility: visible;
+    }
+
+    &-branding,
+    &-nav {
+      /*Adds -branding to .menu, now it represents .menu-branding.*/
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      width: 50%;
+      height: 65vh;
+    }
+
+    &-nav {
+      font-size: 12px;
+      background: darken(white, $amount: 5);
+      transform: translate3d(100%, 0, 0);
+
+      &.showOverlay {
+        /*Slide overlay menu from bottom.*/
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    /*Branding Side*/
+    &-branding {
+      height: 35vh;
+      background: darken(white, $amount: 5);
+      transform: translate3d(-100%, 0, 0);
+      @include easeOut;
+
+      &.showOverlay {
+        /*Slide overlay menu from top.*/
+        transform: translate3d(0, 0, 0);
+      }
+
+      .portrait {
+        background: $branding-smImage;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: solid 3px $highlight-color;
+      }
+    }
+
+    .nav-item {
+      /*Have the item off the screen until show is addded by js.*/
+      transform: translate3d(
+        600px,
+        0,
+        0
+      ); /*Moving item 600 px off the screen to start with.*/
+      @include easeOut;
+
+      &.showOverlay {
+        /*Slide in from right.*/
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .nav-link {
+      font-size: 20px;
     }
   }
 }

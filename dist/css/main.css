@@ -1,10 +1,19 @@
+/*Creating a Function*/
+/*Set Text Color(using a @function because I need it to return a value.*/
+/*Media Query Mixins*/
+/*For screens 768px wide or less.*/
+/*For screens in between 769px to 1170px wide.*/
+/*For screens from 1171px wide and above.*/
+/*Top Right Mobile Menu Button*/
 .menu-btn {
   position: absolute;
   z-index: 3;
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 0.7s ease-out; }
+  visibility: hidden;
+  transition: all 0.7s ease-out;
+  /*Rotate Into X With Menu Lines*/ }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
@@ -14,63 +23,31 @@
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
-      opacity: 0; }
+      transform: rotate(45deg) translate(5px, 5px); }
     .menu-btn.close .btn-line:nth-child(2) {
-      transform: rotate(-45deg) translate(-8px, 11px); }
-    .menu-btn.close .btn-line:nth-child(3) {
-      transform: rotate(45deg) translate(5px, 3px); }
-    .menu-btn.close .btn-line:nth-child(4) {
       opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
 
+/*Bottom Fixed Menu*/
 .menu {
   position: fixed;
-  top: 0;
   width: 100%;
-  opacity: 0.9;
-  visibility: hidden; }
-  .menu.show {
-    visibility: visible; }
+  opacity: 0.9; }
   .menu-branding, .menu-nav {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    float: left;
-    width: 50%;
-    height: 100vh;
     overflow: hidden; }
   .menu-nav {
+    font-size: 30px;
     margin: 0;
     padding: 0;
-    background: #f2f2f2;
     list-style: none;
-    transform: translate3d(0, 100%, 0);
     transition: all 0.7s ease-out; }
-    .menu-nav.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-branding {
-    background: #f2f2f2;
-    transform: translate3d(0, -100%, 0);
-    transition: all 0.7s ease-out; }
-    .menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-    .menu-branding .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../img/portrait.jpg");
-      border-radius: 50%;
-      border: solid 3px #f54e28; }
-  .menu .nav-item {
-    transform: translate3d(600px, 0, 0);
-    transition: all 0.7s ease-out; }
-    .menu .nav-item.show {
-      transform: translate3d(0, 0, 0); }
-    .menu .nav-item.current > a {
-      color: #f54e28; }
+  .menu .nav-item.current > a {
+    color: #f54e28; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 30px;
+    font-size: 15px;
     text-transform: uppercase;
     padding: 1rem;
     font-weight: 300;
@@ -80,6 +57,9 @@
     .menu .nav-link:hover {
       color: #f54e28; }
 
+/*Delay each nav item mobile slide by 0.1s*/
+/*Similar to for(let i = 0; i < 4; i++) in js for example.*/
+/*Since it takes a variable needed to wrap $x in curly brackets, kinda of like a template literal in ES6.*/
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
 
@@ -101,6 +81,7 @@ body {
   font-family: 'Raleway', sans-serif;
   line-height: 1.5; }
 
+/*Headings*/
 h1,
 h2,
 h3 {
@@ -136,7 +117,10 @@ main {
   grid-gap: 0.62rem;
   max-width: 625rem;
   margin: 0;
-  font-size: 100%; }
+  /*height: calc(100vh - 60px);*/
+  /*For creating a stickyy footer.*/
+  font-size: 100%;
+  /*Welcome Page*/ }
   main .welcomePage {
     display: flex;
     flex-flow: column;
@@ -154,13 +138,13 @@ main {
     height: 100%;
     margin: 1rem 0;
     background: #f0f1e8;
-    /* Grid Template */
-    /* Left column */
-    /* Right column */
-    /* About section styling */
-    /* My work */
-    /* Grid-based layout for the images */
-    /* Contact section */ }
+    /*Grid Template*/
+    /*Left column*/
+    /*Right column*/
+    /*About section styling*/
+    /*My work*/
+    /*Grid-based layout for the images*/
+    /*Contact section*/ }
     main section.row {
       display: grid;
       grid-gap: 30px;
@@ -175,7 +159,8 @@ main {
     main section.column.right {
       grid-area: columnRight;
       margin: auto;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      /*width: minmax(50ch, 65ch);*/ }
     main section#about {
       color: #3f3f40;
       /* Beluga */ }
@@ -219,7 +204,7 @@ main {
         color: #f54e28;
         transition: all 0.7s ease-out; }
 
-/* Style the footer */
+/*Style the footer*/
 .main-footer {
   border-top: 1px solid #3f3f40;
   /* Beluga */
@@ -245,8 +230,8 @@ main {
     float: none;
     width: 100%;
     min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
+    ul.menu-nav.showOverlay,
+    div.menu-branding.showOverlay {
       transform: translate3d(0, 0, 0); }
   .menu-nav {
     height: 75vh;
@@ -260,21 +245,60 @@ main {
       width: 150px;
       height: 150px; } }
 
-@media screen and (max-width: 500px) {
+/*Smartphones*/
+@media screen and (max-width: 628px) {
   main .lg-heading {
     font-size: 2rem;
     line-height: 1;
     margin-bottom: 1rem; }
   main#home h1 {
     margin-top: 5vh; }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(100%, 0, 0);
-    font-size: 12px; }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(-100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../img/portrait_small.jpg");
-      width: 100px;
-      height: 100px; } }
+  .menu-btn {
+    visibility: visible; }
+  .menu {
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    /*Branding Side*/ }
+    .menu.showOverlay {
+      visibility: visible; }
+    .menu-branding, .menu-nav {
+      /*Adds -branding to .menu, now it represents .menu-branding.*/
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      width: 50%;
+      height: 65vh; }
+    .menu-nav {
+      font-size: 12px;
+      background: #f2f2f2;
+      transform: translate3d(100%, 0, 0); }
+      .menu-nav.showOverlay {
+        /*Slide overlay menu from bottom.*/
+        transform: translate3d(0, 0, 0); }
+    .menu-branding {
+      height: 35vh;
+      background: #f2f2f2;
+      transform: translate3d(-100%, 0, 0);
+      transition: all 0.7s ease-out; }
+      .menu-branding.showOverlay {
+        /*Slide overlay menu from top.*/
+        transform: translate3d(0, 0, 0); }
+      .menu-branding .portrait {
+        background: url("../img/portrait_small.jpg");
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: solid 3px #f54e28; }
+    .menu .nav-item {
+      /*Have the item off the screen until show is addded by js.*/
+      transform: translate3d(600px, 0, 0);
+      /*Moving item 600 px off the screen to start with.*/
+      transition: all 0.7s ease-out; }
+      .menu .nav-item.showOverlay {
+        /*Slide in from right.*/
+        transform: translate3d(0, 0, 0); }
+    .menu .nav-link {
+      font-size: 20px; } }

@@ -13,7 +13,7 @@ body {
   line-height: 1.5;
 }
 
-// Headings
+/*Headings*/
 h1,
 h2,
 h3 {
@@ -56,10 +56,10 @@ main {
   grid-gap: 0.62rem;
   max-width: 625rem;
   margin: 0;
-  //height: calc(100vh - 60px); // For creating a stickyy footer.
+  /*height: calc(100vh - 60px);*/ /*For creating a stickyy footer.*/
   font-size: 100%;
 
-  // Welcome Page
+  /*Welcome Page*/
   .welcomePage {
     display: flex;
     flex-flow: column;
@@ -85,7 +85,7 @@ main {
     margin: 1rem 0;
     background: $primary-color;
 
-    /* Grid Template */
+    /*Grid Template*/
     &.row {
       display: grid;
       grid-gap: 30px;
@@ -93,7 +93,7 @@ main {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Left column */
+    /*Left column*/
     &.column.left {
       grid-area: columnLeft;
       background-color: #fcfcfa;
@@ -102,15 +102,15 @@ main {
       font-size: 1.2em;
       text-align: center;
     }
-    /* Right column */
+    /*Right column*/
     &.column.right {
       grid-area: columnRight;
       margin: auto;
       padding: 0.5rem;
-      //width: minmax(50ch, 65ch);
+      /*width: minmax(50ch, 65ch);*/
     }
 
-    /* About section styling */
+    /*About section styling*/
     &#about {
       color: #3f3f40; /* Beluga */
     }
@@ -121,8 +121,8 @@ main {
       padding: 2rem;
     }
 
-    /* My work */
-    /* Grid-based layout for the images */
+    /*My work*/
+    /*Grid-based layout for the images*/
     @supports (display: grid) {
       article {
         max-width: 1000px;
@@ -148,7 +148,7 @@ main {
       border-radius: 1rem;
     }
 
-    /* Contact section */
+    /*Contact section*/
     &#call-me {
       color: #3f3f40; /* Beluga */
       border-top: 0.09rem solid Lightgrey;
@@ -173,7 +173,7 @@ main {
   }
 }
 
-/* Style the footer */
+/*Style the footer*/
 .main-footer {
   border-top: 1px solid #3f3f40; /* Beluga */
   padding: 0.62rem;

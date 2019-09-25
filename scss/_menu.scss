@@ -1,10 +1,11 @@
-// Top Right Menu Button
+/*Top Right Mobile Menu Button*/
 .menu-btn {
   position: absolute;
   z-index: 3;
   right: 35px;
   top: 35px;
   cursor: pointer;
+  visibility: hidden;
   @include easeOut;
 
   .btn-line {
@@ -15,104 +16,47 @@
     @include easeOut;
   }
 
-  // Rotate Into X With Menu Lines
+  /*Rotate Into X With Menu Lines*/
   &.close {
     transform: rotate(180deg); // Rotates together the button line 180 degrees.
 
     .btn-line {
-      // Line 1 - Hide
+      // Line 1 - Rotate
       &:nth-child(1) {
-        opacity: 0;
+        transform: rotate(45deg) translate(5px, 5px); // Takes a while but play wiht the px to get the look I want.
       }
-      // Line 2 - Rotate
+      // Line 2 - Hide
       &:nth-child(2) {
-        transform: rotate(-45deg) translate(-8px, 11px); // Takes a while but play wiht the px to get the look I want.
+        opacity: 0;
       }
       // Line 3 - Rotate
       &:nth-child(3) {
-        transform: rotate(45deg) translate(5px, 3px);
-      }
-      // Line 3 - Hide
-      &:nth-child(4) {
-        opacity: 0;
+        transform: rotate(-45deg) translate(7px, -6px);
       }
     }
   }
 }
 
-// Menu Overlay
+/*Bottom Fixed Menu*/
 .menu {
   position: fixed;
-  top: 0;
   width: 100%;
   opacity: $background-opacity;
-  visibility: hidden;
-
-  &.show {
-    visibility: visible;
-  }
 
   &-branding,
   &-nav {
-    // Adds -branding to .menu, now it represents .menu-branding.
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    float: left;
-    width: 50%;
-    height: 100vh;
     overflow: hidden;
   }
 
   &-nav {
+    font-size: 30px;
     margin: 0;
     padding: 0;
-    background: darken(white, $amount: 5);
     list-style: none;
-    transform: translate3d(0, 100%, 0); // Start at the bottom.
     @include easeOut;
-
-    &.show {
-      // Slide overlay menu from bottom.
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  // Branding Side
-  &-branding {
-    background: darken(white, $amount: 5);
-    transform: translate3d(0, -100%, 0); // Start at the top.
-    @include easeOut;
-
-    &.show {
-      // Slide overlay menu from top.
-      transform: translate3d(0, 0, 0);
-    }
-
-    .portrait {
-      width: 250px;
-      height: 250px;
-      background: $branding-image;
-      border-radius: 50%;
-      border: solid 3px $highlight-color;
-    }
   }
 
   .nav-item {
-    // Have the item off the screen until show is addded by js.
-    transform: translate3d(
-      600px,
-      0,
-      0
-    ); // Moving item 600 px off the screen to start with.
-    @include easeOut;
-
-    &.show {
-      // Slide in from right.
-      transform: translate3d(0, 0, 0);
-    }
-
     &.current > a {
       color: $highlight-color;
     }
@@ -121,7 +65,7 @@
   .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 30px;
+    font-size: 15px;
     text-transform: uppercase;
     padding: 1rem;
     font-weight: 300;
@@ -135,11 +79,11 @@
   }
 }
 
-// Delay each nav item slide by 0.1s
-// Similar to for(let i = 0; i < 4; i++) in js for example.
+/*Delay each nav item mobile slide by 0.1s*/
+/*Similar to for(let i = 0; i < 4; i++) in js for example.*/
+/*Since it takes a variable needed to wrap $x in curly brackets, kinda of like a template literal in ES6.*/
 @for $x from 1 through 4 {
   .nav-item:nth-child(#{$x}) {
-    // Since it takes a variable needed to wrap $x in #{}, kinda of like a template literal in ES6.
     transition-delay: $x * 0.1s;
   }
 }
