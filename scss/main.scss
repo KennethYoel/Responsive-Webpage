@@ -7,10 +7,10 @@
 
 body {
   @include background;
-  color: $text-color;
   margin: 0;
   font-family: 'Raleway', sans-serif;
   line-height: 1.5;
+  color: $text-color;
 }
 
 /*Headings*/
@@ -21,7 +21,7 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 4rem; // Same as typing h3.lg-heading in css, modifying the h3 with class lg-heading.
+    font-size: 3rem; // Same as typing h3.lg-heading in css, modifying the h3 with class lg-heading.
   }
 
   &.sm-heading {
@@ -54,6 +54,8 @@ header {
   .heading {
     grid-column: 2/5;
     grid-row: 2/3;
+    align-self: top;
+    justify-self: center;
   }
 
   /*Welcome Page*/

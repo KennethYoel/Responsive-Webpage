@@ -41,7 +41,8 @@
 .menu {
   grid-column: 3/4;
   grid-row: 6/7;
-  width: 100%;
+  align-self: bottom;
+  justify-self: center;
   opacity: $background-opacity;
   bottom: 0;
 
