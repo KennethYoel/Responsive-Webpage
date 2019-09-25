@@ -39,9 +39,11 @@
 
 /*Bottom Fixed Menu*/
 .menu {
-  position: fixed;
+  grid-column: 3/4;
+  grid-row: 6/7;
   width: 100%;
   opacity: $background-opacity;
+  bottom: 0;
 
   &-branding,
   &-nav {
@@ -52,11 +54,13 @@
     font-size: 30px;
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style-type: none;
     @include easeOut;
   }
 
   .nav-item {
+    float: left;
+
     &.current > a {
       color: $highlight-color;
     }
