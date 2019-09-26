@@ -8,7 +8,7 @@
 body {
   @include background;
   max-width: 625rem;
-  margin: 0;
+
   font-family: 'Raleway', sans-serif;
   line-height: 1.5;
   color: $text-color;
@@ -61,7 +61,7 @@ header {
   /*Welcome Page*/
   &.welcomePage {
     color: set-text-color($primary-color);
-    padding: 1.23rem;
+    padding: 2.23rem;
     background: linear-gradient(
       to bottom,
       $text-color 0%,

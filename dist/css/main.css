@@ -80,7 +80,6 @@
 
 body {
   max-width: 625rem;
-  margin: 0;
   font-family: 'Raleway', sans-serif;
   line-height: 1.5;
   color: #3f3f40; }
@@ -125,7 +124,7 @@ header {
     justify-self: center; }
   header.welcomePage {
     color: #fcfcfa;
-    padding: 1.23rem;
+    padding: 2.23rem;
     background: linear-gradient(to bottom, #3f3f40 0%, #ebeae1 100%);
     overflow: hidden; }
     header.welcomePage h1 {
