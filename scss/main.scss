@@ -7,6 +7,7 @@
 
 body {
   @include background;
+  max-width: 625rem;
   margin: 0;
   font-family: 'Raleway', sans-serif;
   line-height: 1.5;
@@ -21,7 +22,7 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 3rem; // Same as typing h3.lg-heading in css, modifying the h3 with class lg-heading.
+    font-size: 3vmin; // Same as typing h3.lg-heading in css, modifying the h3 with class lg-heading.
   }
 
   &.sm-heading {
@@ -42,26 +43,25 @@ a {
 
 header {
   display: grid;
-  grid-template-columns: 4fr 1fr 6fr 1fr 2fr 2fr;
-  grid-template-rows: repeat(auto-fit, minmax(17.94rem, 1fr));
+  grid-template-columns: 2fr 4fr 2fr;
+  grid-template-rows: auto auto auto; //repeat(auto-fit, minmax(17.94rem, 1fr))
   grid-gap: 0.62rem;
-  max-width: 625rem;
   height: 100vh;
   margin: 0;
   /*height: calc(100vh - 60px);*/ /*For creating a stickyy footer.*/
   font-size: 100%;
 
   .heading {
-    grid-column: 2/5;
-    grid-row: 2/3;
-    align-self: top;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: start;
     justify-self: center;
   }
 
   /*Welcome Page*/
   &.welcomePage {
     color: set-text-color($primary-color);
-    padding: 5.23rem;
+    padding: 1.23rem;
     background: linear-gradient(
       to bottom,
       $text-color 0%,
@@ -124,9 +124,6 @@ main {
     /*My work*/
     /*Grid-based layout for the images*/
     @supports (display: grid) {
-      article {
-        max-width: 1000px;
-      }
       .image-layout {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(17.94rem, 1fr));

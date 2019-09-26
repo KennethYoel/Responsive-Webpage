@@ -8,6 +8,14 @@
 
 // Tablets & Small Laptops
 @include mediaMd {
+  header {
+    grid-template-columns: 1fr;
+
+    .heading {
+      grid-column: 1/3;
+    }
+  }
+
   main {
     align-items: center;
     text-align: center;
@@ -16,44 +24,26 @@
       line-height: 1;
       margin-bottom: 1rem;
     }
-  }
 
-  section {
-    .row {
-      grid-template-areas:
-        'columnLeft'
-        'columnRight';
+    section {
+      &.row {
+        grid-template-areas:
+          'columnLeft'
+          'columnRight';
 
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    article {
+      .image-layout {
+        grid-template-columns: 1fr;
+      }
     }
   }
 
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
-
-    &.showOverlay {
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(100%, 0, 0);
-    font-size: 24px;
-  }
-
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(-100%, 0, 0);
-
-    .portrait {
-      background: $branding-smImage;
-      width: 150px;
-      height: 150px;
-    }
+  .menu {
+    grid-column: 1/3;
   }
 }
 
@@ -75,8 +65,9 @@
   }
 
   .menu {
+    width: 100%;
     position: fixed;
-    top: 0;
+    left: 0px;
     visibility: hidden;
 
     &.showOverlay {
@@ -90,8 +81,7 @@
       flex-flow: column wrap;
       align-items: center;
       justify-content: center;
-      float: left;
-      width: 50%;
+      //width: 100%;
       height: 65vh;
     }
 

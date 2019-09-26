@@ -6,7 +6,7 @@
 /*For screens from 1171px wide and above.*/
 /*Top Right Mobile Menu Button*/
 .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   right: 35px;
   top: 35px;
@@ -31,16 +31,14 @@
 
 /*Bottom Fixed Menu*/
 .menu {
-  grid-column: 3/4;
-  grid-row: 6/7;
-  align-self: bottom;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  align-self: end;
   justify-self: center;
-  opacity: 0.9;
-  bottom: 0; }
+  opacity: 0.9; }
   .menu-branding, .menu-nav {
     overflow: hidden; }
   .menu-nav {
-    font-size: 30px;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -52,7 +50,7 @@
   .menu .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 15px;
+    font-size: 2vmin;
     text-transform: uppercase;
     padding: 1rem;
     font-weight: 300;
@@ -81,6 +79,7 @@
   box-sizing: border-box; }
 
 body {
+  max-width: 625rem;
   margin: 0;
   font-family: 'Raleway', sans-serif;
   line-height: 1.5;
@@ -95,7 +94,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 3rem; }
+    font-size: 3vmin; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -110,10 +109,9 @@ a {
 
 header {
   display: grid;
-  grid-template-columns: 4fr 1fr 6fr 1fr 2fr 2fr;
-  grid-template-rows: repeat(auto-fit, minmax(17.94rem, 1fr));
+  grid-template-columns: 2fr 4fr 2fr;
+  grid-template-rows: auto auto auto;
   grid-gap: 0.62rem;
-  max-width: 625rem;
   height: 100vh;
   margin: 0;
   /*height: calc(100vh - 60px);*/
@@ -121,13 +119,13 @@ header {
   font-size: 100%;
   /*Welcome Page*/ }
   header .heading {
-    grid-column: 2/5;
-    grid-row: 2/3;
-    align-self: top;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: start;
     justify-self: center; }
   header.welcomePage {
     color: #fcfcfa;
-    padding: 5.23rem;
+    padding: 1.23rem;
     background: linear-gradient(to bottom, #3f3f40 0%, #ebeae1 100%);
     overflow: hidden; }
     header.welcomePage h1 {
@@ -172,8 +170,6 @@ main section {
     border-radius: 1rem;
     padding: 2rem; }
   @supports (display: grid) {
-    main section article {
-      max-width: 1000px; }
     main section .image-layout {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(17.94rem, 1fr));
@@ -220,34 +216,23 @@ main .icon {
   width: 100%; }
 
 @media screen and (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr; }
+    header .heading {
+      grid-column: 1/3; }
   main {
     align-items: center;
     text-align: center; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
-  section .row {
-    grid-template-areas: 'columnLeft' 'columnRight';
-    grid-template-columns: 1fr; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.showOverlay,
-    div.menu-branding.showOverlay {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(-100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../img/portrait_small.jpg");
-      width: 150px;
-      height: 150px; } }
+    main section.row {
+      grid-template-areas: 'columnLeft' 'columnRight';
+      grid-template-columns: 1fr; }
+    main article .image-layout {
+      grid-template-columns: 1fr; }
+  .menu {
+    grid-column: 1/3; } }
 
 /*Smartphones*/
 @media screen and (max-width: 628px) {
@@ -260,8 +245,9 @@ main .icon {
   .menu-btn {
     visibility: visible; }
   .menu {
+    width: 100%;
     position: fixed;
-    top: 0;
+    left: 0px;
     visibility: hidden;
     /*Branding Side*/ }
     .menu.showOverlay {
@@ -272,8 +258,6 @@ main .icon {
       flex-flow: column wrap;
       align-items: center;
       justify-content: center;
-      float: left;
-      width: 50%;
       height: 65vh; }
     .menu-nav {
       font-size: 12px;
