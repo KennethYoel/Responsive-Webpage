@@ -1,232 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Kenneth Gutierrez | Home</title>
-    <!-- External Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css\main.css" />
-    <!--External JS File-->
-    <script src="js\jquery-3.3.1.min.js"></script>
-    <!-- External Fonts -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
     <link
-      href="https://fonts.googleapis.com/css?family=Raleway"
       rel="stylesheet"
-      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
     />
-    <link
-      href="font - Sad Kropotkin Laugh
-  https://www.dafont.com/sad-kropotkin-laugh.font?l[]=10&l[]=1&text=DESERT"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/style.css" />
+    <style>
+      .container {
+        height: 100vh;
+        margin-top: 120px;
+      }
+      .fa-github:hover {
+        color: #c9510c;
+        transition: all 0.7s ease-out;
+      }
+      .fa-twitter:hover {
+        color: #55acee;
+        transition: all 0.7s ease-out;
+      }
+      .fa-linkedin:hover {
+        color: #00a0dc;
+        transition: all 0.7s ease-out;
+      }
+      .active {
+        border-bottom-style: solid;
+        border-color: #da532c;
+      }
+    </style>
     <!-- Load Icon Library -->
     <script src="https://kit.fontawesome.com/908dd2e7d0.js"></script>
+    <title>Kenneth Gutierrez | Home</title>
   </head>
-
-  <body id="bg-img">
-    <!-- Navigation section for my personal portfolio -->
-    <header class="welcomePage" id="home">
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-      </div>
-
-      <div class="heading">
-        <h1 class="lg-heading">
-          Front-End <span class="text-secondary">Developer</span>
-        </h1>
-      </div>
-
-      <nav class="menu" id="nav-header">
-        <div class="menu-branding">
-          <div class="portrait"></div>
-        </div>
-        <ul class="menu-nav">
-          <li class="nav-item current">
-            <a href="#home" class="nav-link">Home</a>
+  <body>
+    <nav
+      class="navbar navbar-expand-md navbar-dark bg-dark py-3 fixed-top shadow"
+    >
+      <a class="navbar-brand ml-3" href="kennethgutierrez.com">The-Kenny-G_</a>
+      <button
+        class="navbar-toggler mr-2"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto px-4">
+          <li class="nav-item">
+            <ul class="navbar-nav list-group list-group-horizontal icon">
+              <li class="nav-item mr-2">
+                <a
+                  class="nav-link"
+                  href="https://github.com/KennethYoel"
+                  target="_blank"
+                  title="GitHub"
+                  ><i class="fab fa-github fa-2x"></i
+                ></a>
+              </li>
+              <li class="nav-item mr-2">
+                <a
+                  class="nav-link"
+                  href="https://twitter.com/KennethYoel"
+                  target="_blank"
+                  title="Twitter"
+                  ><i class="fab fa-twitter fa-2x"></i
+                ></a>
+              </li>
+              <li class="nav-item mr-3">
+                <a
+                  class="nav-link"
+                  href="https://www.linkedin.com/in/ken-gutierrez-664845b7/"
+                  target="_blank"
+                  title="Linkedin"
+                  ><i class="fab fa-linkedin fa-2x"></i
+                ></a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link font-weight-bold" href="#"
+              >About Me <span class="sr-only">(current)</span></a
+            >
           </li>
           <li class="nav-item">
-            <a href="#about" class="nav-link">About</a>
+            <a class="nav-link font-weight-bold" href="#">Projects</a>
           </li>
           <li class="nav-item">
-            <a href="#projects" class="nav-link">My Work</a>
+            <a class="nav-link font-weight-bold" href="#"
+              ><span>Coding Challenges</span></a
+            >
           </li>
           <li class="nav-item">
-            <a href="#call-me" class="nav-link">Contact Me</a>
+            <a class="nav-link font-weight-bold" href="#"
+              ><span class="border rounded p-2">Contact Me</span></a
+            >
           </li>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
-    <!-- Main section for my personal portfolio -->
-    <main class="main-layout">
-      <!-- About Section-->
-      <section class="row" id="about">
-        <div class="column-left">
-          <h1 class="lg-heading">About</h1>
-          <i
-            class="fa fa-user-o fa-4x"
-            style="border-top: 3px solid #3f3f40;padding-top: 10px;"
-          ></i>
-        </div>
-        <div class="column-right">
-          <h3>Ken Gee</h3>
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-12">
           <p>
-            I’m a developer who welcomes the challenge of turning complex
-            problems into simple, beautiful and intuitive codes. Monarch(Coding)
-            Problems Require Monarch(Kodex) Solutions.
-          </p>
-          <p>
-            And then implementing those codes making sure the interface fulfills
-            its function by working as it should be and smoothly for the user.
-          </p>
-          <p>
-            At the present, working on learning a broad range of cross-industry
+            Ken Gee I’m a developer who welcomes the challenge of turning
+            complex problems into simple, beautiful and intuitive codes.
+            Monarch(Coding) Problems Require Monarch(Kodex) Solutions. And then
+            implementing those codes making sure the interface fulfills its
+            function by working as it should be and smoothly for the user. At
+            the present, working on learning a broad range of cross-industry
             skills such as programming, algorithms, HTML5, CSS3, JavaScript and
             jQuery. And as well building web application at freeCodeCamp and
-            contributing to open source.
+            contributing to open source. When I’m not coding, you’ll find me
+            with a cup of coffee and either reading a good story or exploring
+            the outdoors.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="mx-auto">The-Kenny-G_</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="navbar navbar-expand-md col-md-6">
+          <ul class="navbar-nav mx-auto px-4">
+            <li class="nav-item active">
+              <a class="nav-link font-weight-bold text-dark" href="#"
+                >About Me <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold text-dark" href="#"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold text-dark" href="#"
+                ><span>Coding Challenges</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold text-dark" href="#"
+                ><span>Contact Me</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <p>
+            2020 <a href="https://kennethgutierrez.com">Kenneth Gutierrez</a>
           </p>
           <p>
-            When I’m not coding, you’ll find me with a cup of coffee and either
-            reading a good story or exploring the outdoors.
+            <a href="#top">Back to top</a>
           </p>
         </div>
-      </section>
-
-      <!-- My Works Section-->
-      <section class="row" id="projects">
-        <div class="column-left">
-          <h1 class="lg-heading">My Projects</h1>
-          <i
-            class="fa fa-desktop fa-4x"
-            style="border-top: 3px solid #3f3f40;padding-top: 10px;"
-          ></i>
-        </div>
-        <div class="column-right">
-          <article class="image-layout">
-            <div class="project-tile">
-              <a
-                href="https://codepen.io/privateGee/full/PaXvrx"
-                target="_blank"
-              >
-                <img
-                  src="https://placehold.it/150x80?text=IMAGE"
-                  style="width:100%"
-                  alt="Image"
-                />
-              </a>
-              <h4>freeCodeCamp.org</h4>
-              <span>HTML - CSS - JavaScript</span>
-            </div>
-            <div class="project-tile">
-              <img
-                src="https://placehold.it/150x80?text=IMAGE"
-                style="width:100%"
-                alt="Image"
-              />
-              <h4>Name of Company/Website</h4>
-              <p>The Coding/Work I have done.</p>
-            </div>
-            <div class="project-tile">
-              <img
-                src="https://placehold.it/150x80?text=IMAGE"
-                style="width:100%"
-                alt="Image"
-              />
-              <h4>Name of Company/Website</h4>
-              <p>The Coding/Work I have done.</p>
-            </div>
-            <div class="project-tile">
-              <img
-                src="https://placehold.it/150x80?text=IMAGE"
-                style="width:100%"
-                alt="Image"
-              />
-              <h4>Name of Company/Website</h4>
-              <p>The Coding/Work I have done.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="row" id="call-me">
-        <div class="column-left">
-          <h1 class="lg-heading">Let's Talk</h1>
-          <i
-            class="fa fa-bullhorn fa-4x"
-            style="border-top: 0.24rem solid #3f3f40;padding-top: 0.62rem;"
-          ></i>
-        </div>
-        <div class="column-right icon">
-          <h3>hello@kennethgutierrez.com</h3>
-          <a
-            href="https://github.com/KennethYoel"
-            target="_blank"
-            title="GitHub"
-            ><i class="fab fa-github fa-2x"></i
-          ></a>
-          <a
-            href="https://twitter.com/KennethYoel"
-            target="_blank"
-            title="Twitter"
-            ><i class="fab fa-twitter fa-2x"></i
-          ></a>
-          <a
-            href="https://www.freecodecamp.org/kennethyoel"
-            target="_blank"
-            title="freeCodeCamp"
-          >
-            <i class="fab fa-free-code-camp fa-2x"></i
-          ></a>
-          <a href="#" target="_blank" title="Linkedin"
-            ><i class="fab fa-linkedin fa-2x"></i
-          ></a>
-        </div>
-      </section>
-    </main>
-    <!-- Footer -->
-    <footer class="main-footer">
-      <p>
-        Written and Coded by
-        <a
-          href="https://github.com/KennethYoel"
-          target="_blank"
-          id="profile-link"
-          >Ken Gutierrez</a
-        >.
-      </p>
+      </div>
     </footer>
-    <!-- Toggle between opening and closing curtain menu when the user clicks on the icon -->
-    <div style="float: right">
-      <script src="js/main.js"></script>
-      <!--PostiveSSL-->
-      <script type="text/javascript">
-        //<![CDATA[
-        var tlJsHost =
-          window.location.protocol == 'https:'
-            ? 'https://secure.trust-provider.com/'
-            : 'http://www.trustlogo.com/';
-        document.write(
-          unescape(
-            "%3Cscript src='" +
-              tlJsHost +
-              "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"
-          )
-        );
-        //]]>
-      </script>
-      <script language="JavaScript" type="text/javascript">
-        TrustLogo(
-          'https://www.positivessl.com/images/seals/positivessl_trust_seal_sm_124x32.png',
-          'POSDV',
-          'none'
-        );
-      </script>
-    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
