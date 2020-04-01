@@ -1,4 +1,5 @@
-.page-table, .bg-beluga {
+/*Creating a Function*/
+.bg-beluga {
   background-color: #3f3f3f !important;
   /* adding !important should make it override the default style with my custom one */
 }
@@ -34,88 +35,6 @@ img {
     display: none;
   }
 }
-/*
- * Tables
- */
-.page-table {
-  padding: 15px 15px 15px 15px;
-  margin-bottom: 15px;
-  overflow-x: auto;
-}
-
-#table-inline {
-  display: inline-flex;
-  width: 100%;
-}
-
-#vertical-align {
-  margin-top: 34px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-table ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-th {
-  text-align: left;
-  padding-bottom: 8px;
-}
-
-tr:nth-child(1) > th {
-  color: white;
-}
-
-td {
-  background-color: white;
-  padding: 8px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-}
-
-.bold-text {
-  font-style: italic;
-  font-weight: 600;
-}
-
-.marital-image {
-  width: 25%;
-  height: auto;
-}
-
-.highlight {
-  color: #da532c !important;
-}
-
-@media (max-width: 600px) {
-  #vertical-align {
-    margin-top: 82px;
-  }
-}
-/*
- * Page posts
- */
-.page-post {
-  margin-bottom: 4rem;
-}
-
-/* 
-   * Pagination 
-   */
-.page-pagination {
-  margin-bottom: 4rem;
-}
-
-.page-pagination > .btn {
-  border-radius: 2rem;
-}
-
 /*
    * Footer
    */
