@@ -35,6 +35,50 @@ img {
     display: none;
   }
 }
+/* 
+ * Image Overlay 
+ */
+.img-container {
+  position: relative;
+  width: 50%;
+}
+
+.mod-image {
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.7s ease-out;
+  background-color: white;
+}
+
+.img-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: #3f3f3f;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 /*
    * Footer
    */
