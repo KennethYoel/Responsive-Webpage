@@ -15,10 +15,6 @@ h5,
 h6 {
   font-family: $font-stack;
 }
-img {
-  max-width: 100%;
-  height: auto;
-}
 .bg-beluga {
   @extend %color-shared;
 }
@@ -45,6 +41,15 @@ img {
 }
 
 .mod-image {
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
