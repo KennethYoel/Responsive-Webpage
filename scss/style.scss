@@ -15,11 +15,12 @@ h5,
 h6 {
   font-family: $font-stack;
 }
+
+/* 
+ * Top Nav 
+ */
 .bg-beluga {
   @extend %color-shared;
-}
-.display-4 {
-  font-size: 2.5rem;
 }
 @media (min-width: 768px) {
   .display-4 {
@@ -39,21 +40,19 @@ h6 {
   position: relative;
   width: 50%;
 }
-
 .mod-image {
   -webkit-clip-path: polygon(
-    50% 0%,
-    100% 25%,
-    100% 75%,
-    50% 100%,
-    0% 75%,
-    0% 25%
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    0% 100%,
+    25% 50%,
+    0% 0%
   );
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
-
 .overlay {
   position: absolute;
   top: 0;
@@ -66,11 +65,9 @@ h6 {
   @include easeOut;
   background-color: white;
 }
-
 .img-container:hover .overlay {
   opacity: 1;
 }
-
 .overlay-text {
   color: $primary-color;
   font-size: 20px;
