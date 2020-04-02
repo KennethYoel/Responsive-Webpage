@@ -86,7 +86,7 @@ h6 {
   * Heading Elements
   */
 .custom-heading div {
-  width: 25%;
+  width: 35%;
   height: 1px;
   background: #999 none repeat scroll 0% 0%;
 }
@@ -116,10 +116,6 @@ h6 {
 
   .main-text {
     font-size: 3em;
-  }
-
-  .custom-heading div {
-    width: 35%;
   }
 }
 /* Tablets */
