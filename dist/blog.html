@@ -12,7 +12,6 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="static/style.css" />
-    <script src="static/index.js"></script>
     <style>
       .container {
         /* height: 90vh; */
@@ -87,22 +86,20 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item active" id="about-me">
-            <a class="nav-link nav-text" href="about-me.html"
-              ><span class="active-link">about me</span
-              ><span class="sr-only">(current)</span></a
+          <li class="nav-item">
+            <a class="nav-link nav-text" href="#">about me</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link nav-text" href="#">projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-text" href="#"
+              ><span class="active-link">coding challenges</span>
+              <span class="sr-only">(current)</span></a
             >
           </li>
-          <li class="nav-item" id="projects">
-            <a class="nav-link nav-text" href="projects.html">projects</a>
-          </li>
-          <li class="nav-item" id="coding-challenges">
-            <a class="nav-link nav-text" href="coding-challenges.html"
-              >coding challenges</a
-            >
-          </li>
-          <li class="nav-item" id="contact-me">
-            <a class="nav-link nav-text" href="blog.html"
+          <li class="nav-item">
+            <a class="nav-link nav-text" href="#"
               ><span class="border rounded p-2">blog</span></a
             >
           </li>
@@ -112,7 +109,50 @@
 
     <main role="main" class="container">
       <div class="row">
-        <div class="col-md-12"></div>
+        <div class="col-md-12 mt-5">
+          <h3 class="text-center">Latest projects</h3>
+          <div class="card-deck mt-3">
+            <div class="card shadow">
+              <img
+                class="card-img-top"
+                src="https://res.cloudinary.com/dmxauzh8b/image/upload/v1531060312/IMG_1524.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Name of Company</h5>
+                <p class="card-text">
+                  What I did, in a few words.
+                </p>
+              </div>
+            </div>
+            <div class="card shadow">
+              <img
+                class="card-img-top"
+                src="https://res.cloudinary.com/dmxauzh8b/image/upload/v1531060312/IMG_1524.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Name of Company</h5>
+                <p class="card-text">
+                  What I did, in a few words.
+                </p>
+              </div>
+            </div>
+            <div class="card shadow">
+              <img
+                class="card-img-top"
+                src="https://res.cloudinary.com/dmxauzh8b/image/upload/v1531060312/IMG_1524.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Name of Company</h5>
+                <p class="card-text">
+                  What I did, in a few words.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -132,25 +172,32 @@
       <div class="row">
         <div class="navbar navbar-expand-md col-sm-6">
           <ul class="navbar-nav mx-auto px-4">
-            <li class="nav-item active">
-              <a class="nav-link font-weight-bold text-dark" href="#"
-                ><span class="active-link">about me</span>
-                <span class="sr-only">(current)</span></a
+            <li class="nav-item">
+              <a
+                class="nav-link font-weight-bold text-dark"
+                href="about-me.html"
+                >about me</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link font-weight-bold text-dark" href="#"
+              <a
+                class="nav-link font-weight-bold text-dark"
+                href="projects.html"
                 >projects</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link font-weight-bold text-dark" href="#"
+              <a
+                class="nav-link font-weight-bold text-dark"
+                href="coding-challenges.html"
                 >coding challenges</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link font-weight-bold text-dark" href="#"
-                ><span class="border rounded p-2">blog</span></a
+            <li class="nav-item active">
+              <a class="nav-link font-weight-bold text-dark" href="blog.html"
+                ><span class="border rounded p-2 border-primary"
+                  >blog <span class="sr-only">(current)</span></span
+                ></a
               >
             </li>
           </ul>
@@ -169,5 +216,21 @@
         </div>
       </div>
     </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
