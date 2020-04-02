@@ -25,6 +25,12 @@ h6 {
   font-size: 1em;
 }
 
+.active-link {
+  border-bottom-style: solid;
+  border-color: #da532c;
+  padding-bottom: 5px;
+}
+
 /* 
  * Main Section 
  */

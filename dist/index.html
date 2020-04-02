@@ -12,6 +12,7 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="static/style.css" />
+    <script src="static/index.js"></script>
     <style>
       .container {
         /* height: 90vh; */
@@ -30,10 +31,6 @@
         color: #00a0dc;
         transition: all 0.7s ease-out;
       }
-      .active {
-        border-bottom-style: solid;
-        border-color: #da532c;
-      }
     </style>
     <!-- Load Icon Library -->
     <script src="https://kit.fontawesome.com/908dd2e7d0.js"></script>
@@ -43,7 +40,7 @@
     <nav
       class="navbar navbar-expand-md navbar-dark bg-dark py-3 fixed-top shadow"
     >
-      <a class="navbar-brand ml-3" href="kennethgutierrez.com"
+      <a class="navbar-brand ml-3" href="https://kennethgutierrez.com"
         >&gt;The-Kenny-G_</a
       >
       <button
@@ -90,21 +87,23 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link nav-text" href="#"
-              >About Me <span class="sr-only">(current)</span></a
+          <li class="nav-item" id="about-me">
+            <a class="nav-link text-white nav-text" href="about-me.html"
+              >About Me</a
             >
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-text" href="projects.html">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-text" href="#"
-              ><span>Coding Challenges</span></a
+          <li class="nav-item" id="projects">
+            <a class="nav-link text-white nav-text" href="projects.html"
+              >Projects</a
             >
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-text" href="#"
+          <li class="nav-item" id="coding-challenges">
+            <a class="nav-link text-white nav-text" href="#"
+              >Coding Challenges</a
+            >
+          </li>
+          <li class="nav-item" id="contact-me">
+            <a class="nav-link text-white nav-text" href="#"
               ><span class="border rounded p-2">Contact Me</span></a
             >
           </li>
@@ -116,10 +115,9 @@
       <div class="row">
         <div class="col-md-12 d-flex border-bottom shadow">
           <div class="align-self-center text-center">
-            <h1 class="font-weight-bold main-text">Solver</h1>
+            <h1 class="font-weight-bold main-text">solver</h1>
             <p class="desc-text text-muted w-50 mx-auto">
-              Turning complex problems into simple, beautiful and intuitive
-              codes.
+              Monarch(Coding) Problems Require Monarch(Kodex) Solutions.
             </p>
           </div>
           <div class="img-container mx-auto">
@@ -136,9 +134,10 @@
             </div>
           </div>
           <div class="align-self-center text-center">
-            <h1 class="font-weight-bold main-text">Coder</h1>
+            <h1 class="font-weight-bold main-text">&gt;coder_</h1>
             <p class="desc-text text-muted w-50 mx-auto">
-              Monarch(Coding) Problems Require Monarch(Kodex) Solutions.
+              Turning complex problems into simple, beautiful and intuitive
+              codes.
             </p>
           </div>
         </div>
@@ -212,7 +211,7 @@
       <div class="row">
         <div class="navbar navbar-expand-md col-sm-6">
           <ul class="navbar-nav mx-auto px-4">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link font-weight-bold text-dark" href="#"
                 >About Me <span class="sr-only">(current)</span></a
               >
