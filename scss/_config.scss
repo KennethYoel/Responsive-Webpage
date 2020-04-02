@@ -24,17 +24,21 @@ $highlight-color: #da532c;
     @content;
   }
 }
-
 // Large devices (desktops, 992px and up)
 @mixin mediaLg {
   @media (min-width: 992px) {
     @content;
   }
 }
-
 // Extra large devices (large desktops, 1200px and up)
 @mixin mediaExtLg {
   @media (min-width: 1200px) {
+    @content;
+  }
+}
+// Print Screen Settings
+@mixin mediaPrint {
+  @media print {
     @content;
   }
 }

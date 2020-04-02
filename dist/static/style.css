@@ -21,16 +21,6 @@ h6 {
 /* 
  * Top Nav 
  */
-@media (min-width: 768px) {
-  .display-4 {
-    font-size: 3rem;
-  }
-}
-@media print {
-  .screen-only {
-    display: none;
-  }
-}
 /* 
  * Main Section 
  */
@@ -89,7 +79,7 @@ h6 {
   */
 .custom-heading div {
   width: 35%;
-  height: 0.05rem;
+  height: 1px;
   background: #999 none repeat scroll 0% 0%;
 }
 
@@ -114,6 +104,11 @@ h6 {
 @media (min-width: 576px) {
   .desc-text {
     display: block;
+  }
+}
+@media print {
+  .screen-only {
+    display: none;
   }
 }
 

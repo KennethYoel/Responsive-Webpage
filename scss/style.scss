@@ -22,16 +22,6 @@ h6 {
 .bg-beluga {
   @extend %color-shared;
 }
-@media (min-width: 768px) {
-  .display-4 {
-    font-size: 3rem;
-  }
-}
-@media print {
-  .screen-only {
-    display: none;
-  }
-}
 
 /* 
  * Main Section 
@@ -93,7 +83,7 @@ h6 {
   */
 .custom-heading div {
   width: 35%;
-  height: 0.05rem;
+  height: 1px;
   background: $heading-text-color none repeat scroll 0% 0%;
 }
 
