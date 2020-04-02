@@ -22,12 +22,18 @@ h6 {
 .bg-beluga {
   @extend %color-shared;
 }
+.nav-text {
+  font-size: 1em;
+}
 
 /* 
  * Main Section 
  */
 .desc-text {
   display: none;
+}
+.main-text {
+  font-size: 1.5em;
 }
 
 /* 
@@ -82,7 +88,7 @@ h6 {
   * Heading Elements
   */
 .custom-heading div {
-  width: 35%;
+  width: 25%;
   height: 1px;
   background: $heading-text-color none repeat scroll 0% 0%;
 }

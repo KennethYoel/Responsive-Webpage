@@ -21,11 +21,19 @@ h6 {
 /* 
  * Top Nav 
  */
+.nav-text {
+  font-size: 1em;
+}
+
 /* 
  * Main Section 
  */
 .desc-text {
   display: none;
+}
+
+.main-text {
+  font-size: 1.5em;
 }
 
 /* 
@@ -78,7 +86,7 @@ h6 {
   * Heading Elements
   */
 .custom-heading div {
-  width: 35%;
+  width: 25%;
   height: 1px;
   background: #999 none repeat scroll 0% 0%;
 }
@@ -100,10 +108,24 @@ h6 {
 /*
   * Mobile Settings
   */
-/*Smartphones*/
+/* landscape phones */
 @media (min-width: 576px) {
   .desc-text {
     display: block;
+  }
+
+  .main-text {
+    font-size: 3em;
+  }
+
+  .custom-heading div {
+    width: 35%;
+  }
+}
+/* Tablets */
+@media (min-width: 768px) {
+  .nav-text {
+    font-size: 1.2em;
   }
 }
 @media print {

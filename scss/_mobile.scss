@@ -1,7 +1,22 @@
-/*Smartphones*/
+/* landscape phones */
 @include mediaSm {
   .desc-text {
     display: block;
+  }
+
+  .main-text {
+    font-size: 3em;
+  }
+
+  .custom-heading div {
+    width: 35%;
+  }
+}
+
+/* Tablets */
+@include mediaMd {
+  .nav-text {
+    font-size: 1.2em;
   }
 }
 
