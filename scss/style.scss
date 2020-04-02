@@ -1,5 +1,4 @@
 @import 'config';
-@import 'mobile';
 
 %color-shared {
   background-color: $primary-color !important; /* adding !important should make it override the default style with my custom one */
@@ -32,6 +31,13 @@ h6 {
   .screen-only {
     display: none;
   }
+}
+
+/* 
+ * Main Section 
+ */
+.desc-text {
+  display: none;
 }
 
 /* 
@@ -81,31 +87,30 @@ h6 {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-@include media-breakpoint-up(sm) {
-  .desc-text {
-    display: none;
-  }
-}
 
 /*
-   * Heading Elements
-   */
+  * Heading Elements
+  */
 .custom-heading div {
   width: 35%;
-  height: 1px;
+  height: 0.05rem;
   background: $heading-text-color none repeat scroll 0% 0%;
 }
 
 /*
-   * Footer
-   */
+  * Footer
+  */
 .page-footer {
   padding: 2.5rem 0;
   color: $heading-text-color;
   text-align: center;
   background-color: $secondary-color;
-  border-top: 0.05rem solid #e5e5e5;
 }
 .page-footer p:last-child {
   margin-bottom: 0;
 }
+
+/*
+  * Mobile Settings
+  */
+@import 'mobile';
