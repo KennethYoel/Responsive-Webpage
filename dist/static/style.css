@@ -76,6 +76,15 @@ h6 {
 }
 
 /*
+   * Heading Elements
+   */
+.custom-heading div {
+  width: 35%;
+  height: 1px;
+  background: #999 none repeat scroll 0% 0%;
+}
+
+/*
    * Footer
    */
 .page-footer {
