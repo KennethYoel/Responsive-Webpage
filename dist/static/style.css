@@ -1,102 +1,18 @@
-/*Creating a Function*/
-.bg-beluga {
-  background-color: #3f3f3f !important;
-  /* adding !important should make it override the default style with my custom one */
-}
+/* Error: expected ")".
+ *   ,
+ * 1 | @mixin media-breakpoint-up(sm) {
+ *   |                            ^
+ *   '
+ *   scss\_mobile.scss 1:28  @import
+ *   scss\style.scss 2:9     root stylesheet */
 
-/* 
- * Body 
- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "PT Sans", sans-serif;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected ")".\a   \2577 \a 1 \2502  @mixin media-breakpoint-up(sm) {\d\a   \2502                             ^\a   \2575 \a   scss\\_mobile.scss 1:28  @import\a   scss\\style.scss 2:9     root stylesheet';
 }
-
-/* 
- * Top Nav 
- */
-@media (min-width: 768px) {
-  .display-4 {
-    font-size: 3rem;
-  }
-}
-@media print {
-  .screen-only {
-    display: none;
-  }
-}
-/* 
- * Image Overlay 
- */
-.img-container {
-  position: relative;
-  width: 50%;
-}
-
-.mod-image {
-  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: all 0.7s ease-out;
-  background-color: white;
-}
-
-.img-container:hover .overlay {
-  opacity: 1;
-}
-
-.overlay-text {
-  color: #3f3f3f;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/*
-   * Heading Elements
-   */
-.custom-heading div {
-  width: 35%;
-  height: 1px;
-  background: #999 none repeat scroll 0% 0%;
-}
-
-/*
-   * Footer
-   */
-.page-footer {
-  padding: 2.5rem 0;
-  color: #999;
-  text-align: center;
-  background-color: #f5f5f1;
-  border-top: 0.05rem solid #e5e5e5;
-}
-
-.page-footer p:last-child {
-  margin-bottom: 0;
-}
-
-/*# sourceMappingURL=style.css.map */
