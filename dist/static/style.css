@@ -94,6 +94,12 @@ h6 {
   text-align: center;
 }
 
+.hidden-text {
+  font-size: 0.7em;
+  width: 90%;
+  margin-left: 15px;
+}
+
 /*
   * Heading Elements
   */
@@ -128,6 +134,10 @@ h6 {
 
   .main-text {
     font-size: 3em;
+  }
+
+  .hidden-text {
+    font-size: 1.5em;
   }
 }
 /* Tablets */
