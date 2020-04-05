@@ -12,25 +12,6 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="static/style.css" />
-    <style>
-      .container {
-        /* height: 90vh; */
-        margin-top: 120px;
-        margin-bottom: 60px;
-      }
-      .fa-github:hover {
-        color: #c9510c;
-        transition: all 0.7s ease-out;
-      }
-      .fa-twitter:hover {
-        color: #55acee;
-        transition: all 0.7s ease-out;
-      }
-      .fa-linkedin:hover {
-        color: #00a0dc;
-        transition: all 0.7s ease-out;
-      }
-    </style>
     <!-- Load Icon Library -->
     <script src="https://kit.fontawesome.com/908dd2e7d0.js"></script>
     <!-- Custom JavaScript -->
@@ -59,6 +40,7 @@
             <ul class="navbar-nav list-group list-group-horizontal icon">
               <li class="nav-item mr-2">
                 <a
+                  id="github"
                   class="nav-link"
                   href="https://github.com/KennethYoel"
                   target="_blank"
@@ -68,6 +50,7 @@
               </li>
               <li class="nav-item mr-2">
                 <a
+                  id="twitter"
                   class="nav-link"
                   href="https://twitter.com/KennethYoel"
                   target="_blank"
@@ -77,6 +60,7 @@
               </li>
               <li class="nav-item mr-3">
                 <a
+                  id="linkedin"
                   class="nav-link"
                   href="https://www.linkedin.com/in/ken-gutierrez-664845b7/"
                   target="_blank"
@@ -87,10 +71,14 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-text" href="about-me.html">about me</a>
+            <a class="nav-link nav-text" href="about-me.html"
+              ><span id="nav-about-me">about me</span></a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-text" href="projects.html">projects</a>
+            <a class="nav-link nav-text" href="projects.html"
+              ><span id="nav-projects">projects</span></a
+            >
           </li>
           <li class="nav-item active">
             <a class="nav-link nav-text" href="coding-challenges.html"
@@ -100,7 +88,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link nav-text" href="blog.html"
-              ><span class="border rounded p-2">blog</span></a
+              ><span id="nav-blog" class="border rounded p-2">blog</span></a
             >
           </li>
         </ul>
@@ -176,14 +164,14 @@
               <a
                 class="nav-link font-weight-bold text-dark"
                 href="about-me.html"
-                >about me</a
+                ><span id="nav-about-me">about me</span></a
               >
             </li>
             <li class="nav-item active">
               <a
                 class="nav-link font-weight-bold text-dark"
                 href="projects.html"
-                >projects</a
+                ><span id="nav-projects">projects</span></a
               >
             </li>
             <li class="nav-item">
@@ -198,7 +186,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link font-weight-bold text-dark" href="blog.html"
-                ><span class="border rounded p-2">blog</span></a
+                ><span id="nav-blog" class="border rounded p-2">blog</span></a
               >
             </li>
           </ul>

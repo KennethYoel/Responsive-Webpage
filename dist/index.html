@@ -12,25 +12,6 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="static/style.css" />
-    <style>
-      .container {
-        /* height: 90vh; */
-        margin-top: 120px;
-        margin-bottom: 60px;
-      }
-      .fa-github:hover {
-        color: #c9510c;
-        transition: all 0.7s ease-out;
-      }
-      .fa-twitter:hover {
-        color: #55acee;
-        transition: all 0.7s ease-out;
-      }
-      .fa-linkedin:hover {
-        color: #00a0dc;
-        transition: all 0.7s ease-out;
-      }
-    </style>
     <!-- Load Icon Library -->
     <script src="https://kit.fontawesome.com/908dd2e7d0.js"></script>
     <!-- Custom JavaScript -->
@@ -61,6 +42,7 @@
             <ul class="navbar-nav list-group list-group-horizontal icon">
               <li class="nav-item mr-2">
                 <a
+                  id="github"
                   class="nav-link"
                   href="https://github.com/KennethYoel"
                   target="_blank"
@@ -70,6 +52,7 @@
               </li>
               <li class="nav-item mr-2">
                 <a
+                  id="twitter"
                   class="nav-link"
                   href="https://twitter.com/KennethYoel"
                   target="_blank"
@@ -79,6 +62,7 @@
               </li>
               <li class="nav-item mr-3">
                 <a
+                  id="linkedin"
                   class="nav-link"
                   href="https://www.linkedin.com/in/ken-gutierrez-664845b7/"
                   target="_blank"
@@ -90,24 +74,24 @@
           </li>
           <li class="nav-item" id="about-me">
             <a class="nav-link text-white nav-text" href="about-me.html"
-              >about me</a
+              ><span id="nav-about-me">about me</span></a
             >
           </li>
           <li class="nav-item" id="projects">
             <a class="nav-link text-white nav-text" href="projects.html"
-              >projects</a
+              ><span id="nav-projects">projects</span></a
             >
           </li>
           <li class="nav-item" id="coding-challenges">
             <a
               class="nav-link text-white nav-text"
               href="coding-challenges.html"
-              >coding challenges</a
+              ><span id="nav-coding-challenges">coding challenges</span></a
             >
           </li>
           <li class="nav-item" id="contact-me">
             <a class="nav-link text-white nav-text" href="blog.html"
-              ><span class="border rounded p-2">blog</span></a
+              ><span id="nav-blog" class="border rounded p-2">blog</span></a
             >
           </li>
         </ul>
@@ -116,12 +100,12 @@
 
     <main role="main" class="container">
       <div class="row">
-        <div class="col-md-12 d-flex border-bottom shadow">
-          <div class="align-self-center text-center ml-0">
+        <div class="col-md-12 d-flex justify-content-between shadow">
+          <div class="align-self-center text-center">
             <h1 class="font-weight-bold main-text">solver</h1>
             <p class="desc-text text-muted w-50 mx-auto">
-              In comes the problem and I ask myself: What is the unknown? What
-              are the data? What is the condition?
+              In comes the problem: What is the unknown, the data, the
+              condition?
             </p>
           </div>
           <div class="img-container mx-auto">
@@ -219,26 +203,26 @@
               <a
                 class="nav-link font-weight-bold text-dark"
                 href="about-me.html"
-                >about me <span class="sr-only">(current)</span></a
+                ><span id="nav-about-me">about me</span></a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link font-weight-bold text-dark"
                 href="projects.html"
-                >projects</a
+                ><span id="nav-projects">projects</span></a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link font-weight-bold text-dark"
                 href="coding-challenges.html"
-                >coding challenges</a
+                ><span id="nav-coding-challenges">coding challenges</span></a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link font-weight-bold text-dark" href="blog.html"
-                ><span class="border rounded p-2">blog</span></a
+                ><span id="nav-blog" class="border rounded p-2">blog</span></a
               >
             </li>
           </ul>
