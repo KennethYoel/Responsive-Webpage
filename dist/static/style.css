@@ -56,8 +56,8 @@ h6 {
   padding-bottom: 5px;
 }
 
-#nav-blog:hover {
-  color: #da532c !important;
+.border:hover {
+  border-color: #da532c !important;
 }
 
 #nav-coding-challenges:hover {
