@@ -1,5 +1,5 @@
 /* Creating Variables */
-/* Creating a Function */
+/* Creating Easing Function */
 /* Media Query Mixins */
 .bg-beluga {
   background-color: #3f3f3f !important;
@@ -53,22 +53,26 @@ h6 {
 #nav-about-me:hover {
   border-bottom-style: solid;
   border-color: #da532c;
+  transition: all 0.7s ease-out;
   padding-bottom: 5px;
 }
 
 .border:hover {
   border-color: #da532c !important;
+  transition: all 0.7s ease-out;
 }
 
 #nav-coding-challenges:hover {
   border-bottom-style: solid;
   border-color: #da532c;
+  transition: all 0.7s ease-out;
   padding-bottom: 5px;
 }
 
 #nav-projects:hover {
   border-bottom-style: solid;
   border-color: #da532c;
+  transition: all 0.7s ease-out;
   padding-bottom: 5px;
 }
 

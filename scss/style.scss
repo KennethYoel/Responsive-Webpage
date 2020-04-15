@@ -35,32 +35,36 @@ h6 {
 }
 #github:hover {
   color: #c9510c;
-  transition: all 0.7s ease-out;
+  @include easeOut;
 }
 #twitter:hover {
   color: #55acee;
-  transition: all 0.7s ease-out;
+  @include easeOut;
 }
 #linkedin:hover {
   color: #00a0dc;
-  transition: all 0.7s ease-out;
+  @include easeOut;
 }
 #nav-about-me:hover {
   border-bottom-style: solid;
   border-color: #da532c;
+  @include easeOut;
   padding-bottom: 5px;
 }
 .border:hover {
   border-color: #da532c !important;
+  @include easeOut;
 }
 #nav-coding-challenges:hover {
   border-bottom-style: solid;
   border-color: #da532c;
+  @include easeOut;
   padding-bottom: 5px;
 }
 #nav-projects:hover {
   border-bottom-style: solid;
   border-color: #da532c;
+  @include easeOut;
   padding-bottom: 5px;
 }
 
