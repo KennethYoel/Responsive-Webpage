@@ -4,7 +4,7 @@
   "description": "A personal portfolio website.",
   "main": "dist/static/index.js",
   "dependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^7.0.0"
   },
   "devDependencies": {},
   "scripts": {
